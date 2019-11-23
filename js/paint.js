@@ -92,7 +92,6 @@ var eraserLabel= document.createElement('h3');
 var transformContainer = document.createElement('div');
 var transformHeader = document.createElement('h3');
 var transformRadioForm = document.createElement('form');
-var turnRightBtn = document.createElement('button');
 var clearContainer = document.createElement('div');
 var clearCanvasBtn = document.createElement('button');
 var canvasContainer = document.createElement('div');

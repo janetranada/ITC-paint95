@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #c3f0ca;
+}
+
+#mainContainer {
+    display: flex;
+    height: 100vh;
+    width: 100wh;
+}
+button {
+    cursor: pointer;
+}
+button:focus {outline:0;}
+
+
+/* Selections */
+.selectedColor {
+    box-shadow: 7px 7px 5px #6ba8a9;
+    border-style: dotted;
+}
+.selectedSize {
+    box-shadow: 9px 3px 5px #6ba8a9;
+    background-color: black;
+    color: white;
+}
+.selectEraser {
+    background-color: white;
+}
+
+
+/* Canvas */
+.canvasContainer {
+    flex-grow: 1; 
+    min-width: 320px; 
+    min-height: 320px;  
+}
+.canvas {
+    background-color: white;
+    margin: auto;      
+    overflow: hidden; 
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);    
+} 
+.canvasSizeContainer {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.canvasSizeContainer label {
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+
+
+/* Functionalities */
+.functionalities {
+    width: 250px;
+    height: 900px;
+    background-color: #faeee7;
+    flex-shrink: 0;
+    padding: 6px 9px;    
+}
+.functionalities .container {
+    border-color: lightgray;
+    border-top-style: dotted;
+    border-width: thin;
+}
+.functionalities ul {
+    padding: 0;
+    list-style: none;
+}
+.function-bg {
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Color container */
+.colorContainer li {
+  display: inline-block;
+}
+.colorContainer {
+    text-align: center;    
+    height: 200px;
+}
+.colorButton {
+    border-radius: 50%;
+    border-style: solid;
+    color: white;
+    margin: 6px; 
+    height: 54px;   
+    width: 54px;  
+}
+.colorButton:hover {
+    opacity: 0.6;
+    width: 60px;
+    height: 60px;
+    border: solid gray;
+}
+
+
+/* Color Palette */
+.blackInk {
+    background-color: black;
+}
+.redInk {
+    background-color: red;
+}
+.yellowInk {
+    background-color:yellow;
+}
+.greenInk {
+    background-color:green;
+}
+.blueInk {
+    background-color:blue;
+}
+.violetInk {
+    background-color:violet;
+}
+.orangeInk {
+    background-color: #f45905;
+}
+.darkVioletInk {
+    background-color: #512c62;
+}
+.lightBlueInk {
+    background-color: #9be3de;
+}
+.whiteInk {
+    background-color: white;
+}
+
+
+/* Pen Container (size) */
+.pen {
+    position: absolute;
+    pointer-events: none;
+}
+.smallPenBtn {
+    height: 4px;
+    width:4px;     
+}
+.mediumPenBtn {
+    height: 8px;
+    width:8px ;
+}
+.largePenBtn {
+    height: 12px;
+    width: 12px ;
+}
+.penSizeBtn {
+    width: 65px;
+    height: 25px;
+    margin: 4px 0 5px 22px;
+    border-radius: 5px;
+}
+.penContainer {
+    height: 150px;
+    background-image: url('../images/quill.png');    
+    background-position-x: left;
+    background-position-y: center; 
+    margin-top: 35px;    
+    padding: 10px;
+    align-items: flex-end; 
+    flex-wrap: wrap;      
+}
+
+
+/* Eraser Container */
+.eraser {
+    width: 95px;
+    margin-left: 6px;
+    margin-top: 8px;
+}
+.eraserContainer {
+    background-image: url('../images/eraser.png');
+    background-position: right 15px;
+    height: 100px;      
+    align-items:left;
+    justify-content: center;
+    padding: 15px 30px;
+    margin: 20px auto;
+}
+input.eraserCheck {
+    width:35px;
+    height: 35px;
+    margin-left: 20px;
+}
+
+
+/* Transform and Clear Containers */
+.clearContainer,
+.transformContainer {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transformContainer {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+.clearCanvasBtn {
+    height: 35px;
+    width: 75%;
+    border-radius: 6px;
+    background-color: #393e46;
+    border-style: none;
+    box-shadow: 5px 5px 5px gray;
+    font-size: 1.3rem;
+    color: white;   
+}
+.clearCanvasBtn:hover {
+    background-color: #357376;
+}
+
+/* Modal */
+#modal-wrapper .modal{
+    background-color: #1b2a49;
+    color: white;
+    min-width: 200px;
+    min-height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 40px;
+    border-radius: 5px;
+}
+#modal-wrapper .close-btn{
+    position:absolute;
+    right:10px;
+    top:10px;
+}
+#modal-wrapper{
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color:rgba(0,0,0,0.5);
+    z-index:12345;
+}
+#modal-wrapper .modal-title{
+    margin-bottom: 10px;
+    font-size:40px;
+    color: #f6da63;
+}
+.modal-content {
+    margin-bottom: 15px;
+}
