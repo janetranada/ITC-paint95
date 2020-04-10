@@ -75,27 +75,27 @@ let canvasHeight;
 let canvasWidth;
 let xOffset, yOffset; 
 
-var mainContainer = document.getElementById("mainContainer");
-var modalWrapper = document.createElement('div');
-var modal = document.createElement('div');
-var modalTitle = document.createElement('div');
-var modalHeightInput = document.createElement('div');
-var modalWidthInput = document.createElement('div');
-var modalOkBtn = document.createElement('button');
-var functionContainer = document.createElement('div');
-var colorContainer = document.createElement('ul');
-var penContainer = document.createElement('div');
-var penSizeHeader = document.createElement('ul');
-var eraserContainer = document.createElement('div');
-var eraserOption= document.createElement('input');
-var eraserLabel= document.createElement('h3');
-var transformContainer = document.createElement('div');
-var transformHeader = document.createElement('h3');
-var transformRadioForm = document.createElement('form');
-var clearContainer = document.createElement('div');
-var clearCanvasBtn = document.createElement('button');
-var canvasContainer = document.createElement('div');
-var theCanvas = document.createElement('div');
+const mainContainer = document.getElementById("mainContainer");
+const modalWrapper = document.createElement('div');
+const modal = document.createElement('div');
+const modalTitle = document.createElement('div');
+const modalHeightInput = document.createElement('div');
+const modalWidthInput = document.createElement('div');
+const modalOkBtn = document.createElement('button');
+const functionContainer = document.createElement('div');
+const colorContainer = document.createElement('ul');
+const penContainer = document.createElement('div');
+const penSizeHeader = document.createElement('ul');
+const eraserContainer = document.createElement('div');
+const eraserOption= document.createElement('input');
+const eraserLabel= document.createElement('h3');
+const transformContainer = document.createElement('div');
+const transformHeader = document.createElement('h3');
+const transformRadioForm = document.createElement('form');
+const clearContainer = document.createElement('div');
+const clearCanvasBtn = document.createElement('button');
+const canvasContainer = document.createElement('div');
+const theCanvas = document.createElement('div');
 
 appendMyElement(modalWrapper, 'modal-wrapper', mainContainer, 'modal-wrapper');
 appendMyElement(modal, 'modal', modalWrapper, 'modal');
@@ -122,8 +122,8 @@ transformHeader.innerHTML = "Transform original canvas"
 penSizeHeader.innerHTML = "Select brush size";
 
 modalTitle.innerHTML = 'Set Canvas Size';
-modalHeightInput.innerHTML = 'Height (px): <input type="number" id="height" placeholder="input a number (300-700)" />'
-modalWidthInput.innerHTML = 'Width (px): <input type="number" id="width" placeholder="input a number (300-700)" />'
+modalHeightInput.innerHTML = 'Height (px): <input type="number" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
+modalWidthInput.innerHTML = 'Width (px): <input type="number" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
 modalOkBtn.innerHTML = 'OK';
 
 eraserOption.setAttribute('type', 'checkbox');

@@ -252,6 +252,9 @@ input.eraserCheck {
     font-size:40px;
     color: #f6da63;
 }
+.dimension {
+    width: 160px;
+}
 .modal-content {
     margin-bottom: 15px;
 }
