@@ -44,8 +44,8 @@ function checkTransform (radioArr) {
 }
 
 function checkCanvasSizeInput() {
-  if (canvasHeight === "" || canvasWidth === "" || canvasHeight < 300 || canvasWidth < 300 ||  canvasHeight > 700 || canvasWidth > 700) {
-    alert('Invalid size!!! Min = 300 / Max = 700');
+  if (canvasHeight === "" || canvasWidth === "" || canvasHeight < 300 || canvasWidth < 300 ||  canvasHeight > 600 || canvasWidth > 600) {
+    alert('Invalid size!!! Min = 300 / Max = 600');
   } else {
     theCanvas.style.height = canvasHeight +'px';
     theCanvas.style.width = canvasWidth + 'px';
@@ -122,8 +122,8 @@ transformHeader.innerHTML = "Transform original canvas"
 penSizeHeader.innerHTML = "Select brush size";
 
 modalTitle.innerHTML = 'Set Canvas Size';
-modalHeightInput.innerHTML = 'Height (px): <input type="number" id="height" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
-modalWidthInput.innerHTML = 'Width (px): <input type="number" id="width" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
+modalHeightInput.innerHTML = 'Height (px): <input type="number" id="height" class="dimension" placeholder="input a number (300-600)" min="300" max="600" />'
+modalWidthInput.innerHTML = 'Width (px): <input type="number" id="width" class="dimension" placeholder="input a number (300-600)" min="300" max="600" />'
 modalOkBtn.innerHTML = 'OK';
 
 eraserOption.setAttribute('type', 'checkbox');
