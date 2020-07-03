@@ -122,8 +122,8 @@ transformHeader.innerHTML = "Transform original canvas"
 penSizeHeader.innerHTML = "Select brush size";
 
 modalTitle.innerHTML = 'Set Canvas Size';
-modalHeightInput.innerHTML = 'Height (px): <input type="number" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
-modalWidthInput.innerHTML = 'Width (px): <input type="number" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
+modalHeightInput.innerHTML = 'Height (px): <input type="number" id="height" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
+modalWidthInput.innerHTML = 'Width (px): <input type="number" id="width" class="dimension" placeholder="input a number (300-700)" min="300" max="700" />'
 modalOkBtn.innerHTML = 'OK';
 
 eraserOption.setAttribute('type', 'checkbox');
